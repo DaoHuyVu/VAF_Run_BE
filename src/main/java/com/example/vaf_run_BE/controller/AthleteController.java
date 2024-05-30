@@ -2,7 +2,6 @@ package com.example.vaf_run_BE.controller;
 
 import com.example.vaf_run_BE.service.AthleteService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -26,10 +25,10 @@ public class AthleteController {
         return ResponseEntity.ok().body(null);
     }
     @GetMapping("athletes/activity")
-    public ResponseEntity<?> getActivitiesAtDate(
+    public ResponseEntity<?> getActivities(
             @RequestParam("date") LocalDate date
     ){
-        return ResponseEntity.ok().body(athleteService.getActivitiesAtDate(date));
+        return ResponseEntity.ok().body(athleteService.getActivities(date));
     }
     @PostMapping("athletes/activity")
     public ResponseEntity<?> addActivity(

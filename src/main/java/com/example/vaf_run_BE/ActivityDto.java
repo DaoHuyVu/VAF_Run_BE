@@ -14,4 +14,5 @@ public class ActivityDto {
     private Float distance;
     private Integer totalTime;
     private String avgPace;
+    private Integer groupId;
 }
